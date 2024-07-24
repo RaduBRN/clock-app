@@ -1,6 +1,6 @@
 const fetchLocation = async () => {
   const response = await fetch(
-    `https://corsproxy.io/?http%3A%2F%2Fip-api.com%2Fjson`
+    `https://api.ipbase.com/v2/info?apikey=ipb_live_muqvGjpMx2w5gjyjF2ZzNZ1YCnNL2tVOEjtZPKtj`
   )
     .then((res) => res.json())
     .catch(() => {

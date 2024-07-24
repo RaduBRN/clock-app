@@ -37,7 +37,7 @@ export default function Home() {
     isError: timeError,
     isFetching: timeFetching,
     data: timeData,
-  } = useTime(locationData?.timezone);
+  } = useTime(locationData?.data?.timezone?.id);
 
   const {
     isError: quoteError,
@@ -68,8 +68,8 @@ export default function Home() {
   useEffect(() => {
     locationData &&
       setLocation({
-        city: locationData.city,
-        countryCode: locationData.countryCode,
+        city: locationData?.data?.location?.city?.name,
+        countryCode: locationData?.data?.location?.country?.alpha2,
       });
   }, [locationData, setLocation]);
 

@@ -7,7 +7,7 @@ import TabletNightTimeBg from "../public/assets/tablet/bg-image-nighttime.jpg";
 
 function getCurrentTime(timeData) {
   const shortTz = new Date().toLocaleString("en", {
-    timeZone: timeData?.timezone,
+    timeZone: timeData?.data?.timezone?.id,
   });
 
   const date = new Date(shortTz);
