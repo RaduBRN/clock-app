@@ -63,7 +63,7 @@ export default function Home() {
         }
       }, 1000);
     }
-  }, [timeData]);
+  }, [timeData, timeInfo, setTimeInfo]);
 
   useEffect(() => {
     locationData &&
@@ -71,7 +71,7 @@ export default function Home() {
         city: locationData.city,
         countryCode: locationData.countryCode,
       });
-  }, [locationData]);
+  }, [locationData, setLocation]);
 
   useEffect(() => {
     if (timeInfo) returnGreeting(timeInfo, setGreetingValue);

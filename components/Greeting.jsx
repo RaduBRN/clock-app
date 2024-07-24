@@ -26,7 +26,7 @@ function Greeting() {
       {greetings[greetingValue]?.icon}
       <p className="text-[#fff] text-sm md:text-base lg:text-xl tracking-[4px] uppercase">
         {greetings[greetingValue]?.message}
-        <span className="hidden md:inline-block">, it's currently</span>
+        <span className="hidden md:inline-block">{`, it's currently`}</span>
       </p>
     </div>
   );

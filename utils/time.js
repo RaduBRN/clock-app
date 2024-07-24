@@ -11,13 +11,8 @@ function getCurrentTime(timeData) {
   });
 
   const date = new Date(shortTz);
-  console.log(date);
-  const hours = date.getHours().toString().padStart(2, "T");
-  const minutes = date
-    .getMinutes()
-    .toString()
-    .padStart(2, ":")
-    .replace(":", "0");
+  const hours = date.getHours().toString().padStart(2, "0");
+  const minutes = date.getMinutes().toString().padStart(2, "0");
 
   const formattedTime = `${hours}:${minutes}`;
 
@@ -30,7 +25,6 @@ function getCurrentTime(timeData) {
 }
 
 const returnBackgroundImage = (width, timeInfo) => {
-  console.log(timeInfo);
   if (width > 1024) {
     if (timeInfo?.hours >= 18 || timeInfo?.hours <= 5) {
       return NightTimeBackground;
