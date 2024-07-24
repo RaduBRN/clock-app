@@ -103,7 +103,7 @@ export default function Home() {
             returnBackgroundImage(width, timeInfo)?.src
           })`,
         }}
-        className="!fixed inset-0 object-cover -z-50 brightness-50"
+        className="!fixed inset-0 bg-cover -z-50 brightness-50"
       />
       <div className="w-full max-w-[1000px] mx-auto flex flex-col justify-between">
         <AnimatePresence>

@@ -15,8 +15,8 @@ Users should be able to:
 
 ## Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [My solution on Frontend Mentor](https://www.frontendmentor.io/solutions/responsive-clock-app-using-nextjs-tanstack-recoil-tailwind-framerm-E8bE5JxPAe)
+- Live Site URL: [Live site](https://heroic-lebkuchen-df521d.netlify.app/)
 
 ## Built with
 
@@ -26,3 +26,7 @@ Users should be able to:
 - [TanStack Query](https://tanstack.com/query/latest) - Data fetching and synchronization
 - [Recoil](https://recoiljs.org/) - Global state management
 - [Framer Motion](https://www.framer.com/motion/) - For animations
+
+## Disclaimer
+
+Since the location API is a free version, it has a limited number of monthly calls. When this limit is exceeded, the location under the time shows up as undefined.
