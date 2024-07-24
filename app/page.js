@@ -97,13 +97,14 @@ export default function Home() {
         timeInfo.hours >= 18 || timeInfo.hours < 5 ? "dark" : "light"
       }`}
     >
-      <Image
-        className="!fixed inset-0 object-cover -z-50"
-        src={returnBackgroundImage(width, timeInfo)?.src}
-        alt="Background image"
-        fill
+      <div
+        style={{
+          backgroundImage: `url(${
+            returnBackgroundImage(width, timeInfo)?.src
+          })`,
+        }}
+        className="!fixed inset-0 object-cover -z-50 after:fixed after:inset-0 after:bg-black after:opacity-50"
       />
-      <div className="fixed inset-0 -z-40 bg-black opacity-[50%]" />
       <div className="w-full max-w-[1000px] mx-auto flex flex-col justify-between">
         <AnimatePresence>
           {!toggle && quoteData && (
