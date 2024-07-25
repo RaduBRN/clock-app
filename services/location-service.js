@@ -1,6 +1,6 @@
 const fetchLocation = async () => {
   const response = await fetch(
-    `https://api.ipbase.com/v2/info?apikey=ipb_live_muqvGjpMx2w5gjyjF2ZzNZ1YCnNL2tVOEjtZPKtj`
+    `https://ipgeolocation.abstractapi.com/v1/?api_key=0105fdb02f74421099a86cd7f223882b`
   )
     .then((res) => res.json())
     .catch(() => {

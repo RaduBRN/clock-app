@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 
 import { useTime } from "@/hooks/time-hook";
@@ -27,17 +26,9 @@ export default function Home() {
   const [width, setWidth] = useState(undefined);
   const setGreetingValue = useSetRecoilState(greetingValueAtom);
 
-  const {
-    isError: locationError,
-    isFetching: locationFetching,
-    data: locationData,
-  } = useLocation();
+  const { data: locationData } = useLocation();
 
-  const {
-    isError: timeError,
-    isFetching: timeFetching,
-    data: timeData,
-  } = useTime(locationData?.data?.timezone?.id);
+  const { data: timeData } = useTime(locationData?.timezone?.name);
 
   const {
     isError: quoteError,
@@ -68,8 +59,8 @@ export default function Home() {
   useEffect(() => {
     locationData &&
       setLocation({
-        city: locationData?.data?.location?.city?.name,
-        countryCode: locationData?.data?.location?.country?.alpha2,
+        city: locationData?.city,
+        countryCode: locationData?.country_code,
       });
   }, [locationData, setLocation]);
 
