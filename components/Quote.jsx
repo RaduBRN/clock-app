@@ -13,12 +13,12 @@ function Quote({ isError, isPending, data, refetch }) {
       {data && (
         <div className="flex flex-col gap-4">
           <div className="flex gap-3">
-            <span className="w-[550px] text-lg">{data[0]?.content}</span>
+            <span className="w-[550px] text-lg">{data[0]?.q}</span>
             <div onClick={refetch} className="mt-2">
               <IconRefresh />
             </div>
           </div>
-          <p className="font-bold text-lg">{data[0]?.author}</p>
+          <p className="font-bold text-lg">{data[0]?.a}</p>
         </div>
       )}
     </div>
