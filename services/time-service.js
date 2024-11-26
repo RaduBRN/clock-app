@@ -1,6 +1,6 @@
 const fetchTime = async (timezone) => {
   const response = await fetch(
-    `https://worldtimeapi.org/api/timezone/${timezone}`
+    `https://timeapi.io/api/time/current/zone?timeZone=${timezone}`
   )
     .then((res) => res.json())
     .catch(() => {

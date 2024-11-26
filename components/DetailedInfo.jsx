@@ -8,15 +8,15 @@ function DetailedInfo({ data }) {
               Current Timezone
             </p>
             <h2 className="font-bold text-[20px] md:text-[40px] lg:text-[56px]">
-              {data?.timezone}
+              {data?.timeZone}
             </h2>
           </div>
           <div className="flex items-center justify-between md:block">
             <p className="uppercase text-[10px] md:text-[13px] lg:text-[15px] tracking-[2px] md:tracking-[3px] text-nowrap">
-              Day of the year
+              Day of the month
             </p>
             <h2 className="font-bold text-[20px] md:text-[40px] lg:text-[56px]">
-              {data?.day_of_year}
+              {data?.day}
             </h2>
           </div>
         </div>
@@ -26,15 +26,15 @@ function DetailedInfo({ data }) {
               Day of the Week
             </p>
             <h2 className="font-bold text-[20px] md:text-[40px] lg:text-[56px]">
-              {data?.day_of_week === 0 ? "7" : data?.day_of_week}
+              {data?.dayOfWeek}
             </h2>
           </div>
           <div className="flex items-center justify-between md:block">
             <p className="uppercase text-[10px] md:text-[13px] lg:text-[15px] tracking-[2px] md:tracking-[3px] text-nowrap">
-              Week number
+              Month number
             </p>
             <h2 className="font-bold text-[20px] md:text-[40px] lg:text-[56px]">
-              {data?.week_number}
+              {data?.month}
             </h2>
           </div>
         </div>
